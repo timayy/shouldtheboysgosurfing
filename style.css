@@ -1,0 +1,115 @@
+.center {
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 18vh;
+  color: #3b3b3b;
+}
+
+
+h2 {
+  font-size: 4vw;
+  color: #fff;
+}
+
+
+.author-div {
+  position: relative;
+}
+
+.author-div p {
+  position: absolute;
+  bottom: 45px;
+  right: 10px;
+  margin: 0;
+  color: white;
+  font-size: 1.5vh;
+  font-weight: bold;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(bg.png);
+  background-size: cover;
+  flex-direction: column;
+}
+
+.swell-div h2 {
+  margin-bottom: -5%;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  padding-top: 12%;
+  top: -5px;
+  left: 0;
+  background-image: url(wave.png);
+  background-repeat: repeat-x;
+  background-size: 100%;
+  animation: wave 8s linear infinite;
+}
+
+.wave::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-top: 12%;
+  top: -5px;
+  left: 0;
+  background-image: url(wave.png);
+  background-repeat: repeat-x;
+  background-size: 100%;
+  opacity: .2;
+  animation: wave-reverse 8s linear infinite;
+}
+
+.wave::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-top: 12%;
+  top: -5px;
+  left: 0;
+  background-image: url(wave.png);
+  background-repeat: repeat-x;
+  background-size: 100%;
+  opacity: .8;
+  animation-delay: -4s;
+  animation: wave 16s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 100vw;
+  }
+}
+
+@keyframes wave-reverse {
+  0% {
+    background-position: 100vw;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
